@@ -46,6 +46,10 @@ Apps SHOULD have browser tests for:
 - mobile editor/preview behavior;
 - keyboard access to critical controls.
 
+Browser testing via Playwright SHOULD support cross-browser runs (e.g., via
+a `PLAYWRIGHT_BROWSERS=all` environment variable) and SHOULD pin the locale
+to avoid flakiness in translations and formatting.
+
 Visual export and print behavior still require manual testing on target devices.
 
 ## Commands
@@ -61,8 +65,12 @@ npm run typecheck
 npm run verify
 ```
 
-`verify` SHOULD run every automated release gate. If a command is not relevant,
-the README must state the equivalent.
+`verify` MUST run in continuous integration (CI) and SHOULD gate automated
+releases. If a command is not relevant, the README must state the equivalent.
+
+Repositories SHOULD also include a `verify:live` or `smoke:production` script
+to validate deployed instances (e.g., checking for expected HTTP headers,
+CSP, and PWA assets).
 
 Use `npm ci` for reproducible CI and release builds. Pin the supported Node
 major version.
