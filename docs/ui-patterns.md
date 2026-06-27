@@ -99,7 +99,11 @@ For document or media generators:
   flow.
 - Changes SHOULD appear in the preview immediately.
 - Editor panels SHOULD be grouped by user intent, not internal data structure.
-- Advanced or infrequent options SHOULD be collapsed by default.
+- Advanced or infrequent options SHOULD be collapsed by default. Native
+  `<details>` and `<summary>` elements SHOULD be used to ensure semantic
+  accessibility for these collapsible sections.
+- Editors requiring a specific device orientation MAY include a dismissible
+  orientation strip to guide the user.
 - The currently edited item MUST be visually identifiable.
 
 ## Project actions
@@ -141,7 +145,11 @@ Content pages SHOULD use:
 
 - Do not merely shrink desktop controls.
 - Keep the primary action visible and reachable.
-- Wrap or regroup actions before truncating meaningful labels.
+- Wrap or regroup actions before truncating meaningful labels. Container queries
+  SHOULD be used to restructure tight components (e.g., side-by-side options)
+  when their container lacks space.
+- Hide non-critical navigation (e.g., privacy link) on extremely narrow screens
+  (e.g., `<360px`) if necessary to prevent layout breakage.
 - Test at `320px`, `390px`, tablet portrait, and a standard desktop width.
 - Paper previews may scale visually, but editor text and controls must remain
   readable without zooming.

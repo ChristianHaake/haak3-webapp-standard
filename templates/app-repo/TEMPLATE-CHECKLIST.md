@@ -13,6 +13,11 @@ Search the repository for `{{` and replace every placeholder.
 - [ ] Add `dev`, `build`, `test`, `lint`, `typecheck`, and `verify` scripts.
 - [ ] Pin the supported Node major version.
 
+## Configure infrastructure
+
+- [ ] Rename the app in `wrangler.jsonc` and confirm the `dist` directory.
+- [ ] Enable the GitHub Actions CI workflow in `.github/workflows/ci.yml`.
+
 ## Agent skills
 
 - [ ] Confirm Codex discovers `.agents/skills/caveman` and
@@ -34,6 +39,7 @@ Search the repository for `{{` and replace every placeholder.
 - [ ] Adjust `public/_headers` to actual network and embedding requirements.
 - [ ] Complete and review privacy and imprint content.
 - [ ] Confirm storage, reset, import, and export behavior.
+- [ ] Test production builds locally with a `verify:live` or `smoke:production` script.
 - [ ] Complete `docs/review-checklist.md`.
 
 ## License

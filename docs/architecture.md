@@ -56,7 +56,6 @@ when losing work would be costly.
   operator.
 - If the app claims that content stays local, its Content Security Policy
   SHOULD prevent outbound connections not required by the product.
-
 ## Deployment and security
 
 Production apps MUST use HTTPS and SHOULD define:
@@ -71,6 +70,11 @@ Production apps MUST use HTTPS and SHOULD define:
 
 The CSP MUST reflect actual application behavior. Do not copy
 `connect-src 'none'` into an app that legitimately makes network requests.
+
+Apps deploying to Cloudflare Pages SHOULD use a `wrangler.jsonc` file to
+configure static asset deployment, directing to the build output directory
+(e.g., `dist`) and setting `not_found_handling` to `single-page-application`
+for SPAs.
 
 Preview deployments SHOULD use `X-Robots-Tag: noindex`.
 

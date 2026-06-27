@@ -1,11 +1,11 @@
 # Reference Application Audit
 
-Audit date: 2026-06-16 (refreshed from the 2026-06-13 first draft)
+Audit date: 2026-06-25 (refreshed from 2026-06-16)
 
 This audit records the evidence used to maintain the standard. It is not a
-permanent ranking of the apps. It was refreshed after a week of parallel
-development that closed several earlier gaps and made new patterns eligible for
-standardization.
+permanent ranking of the apps. It was refreshed after parallel
+development that closed several earlier gaps (such as CI and Playwright coverage)
+and introduced new patterns from apps including Prompter.
 
 ## SocialMediaCreator
 
@@ -22,7 +22,8 @@ Strong reference patterns:
 - offline PWA support via `vite-plugin-pwa` with a full icon and maskable set;
 - hardened Cloudflare security headers (`public/_headers`): CSP, Permissions-
   Policy, Referrer-Policy, X-Content-Type-Options, X-Frame-Options;
-- service worker generated without external URLs.
+- service worker generated without external URLs;
+- semantic disclosures using `<details>` and `<summary>` for complex forms.
 
 Exceptions or app-specific behavior:
 
@@ -42,18 +43,17 @@ Strong reference patterns:
   alternatives to drag-and-drop;
 - content separated into JSON and Markdown;
 - accessible footer repository link with an inline GitHub icon
-  (`src/ui/templates.ts`), used as the markup reference for the footer pattern.
+  (`src/ui/templates.ts`), used as the markup reference for the footer pattern;
+- cross-browser end-to-end coverage with Playwright and `verify:live` deployment validation.
 
 Gaps relative to the draft:
 
 - visual language differs from the SocialMediaCreator baseline;
-- German-only; the other two apps now ship German and English;
 - no production security headers and no `wrangler` configuration; a CSP PR was
   reverted (#36 → #37) and the hardening is still missing;
-- no continuous integration and no browser-level (end-to-end) test suite; unit
-  tests only (`vitest`);
+- no continuous integration workflow;
 - license metadata conflicts and is still unresolved: `package.json` declares
-  `MIT` while the `LICENSE` file contains GPLv3 text. The other two apps declare
+  `MIT` while the `LICENSE` file contains GPLv3 text. The other apps declare
   `GPL-3.0-only` consistently.
 
 ## StoryboardDesigner
@@ -77,6 +77,14 @@ Gaps relative to the draft:
 - no continuous-integration workflow yet;
 - branding assets are lighter than the other apps (no `public` SVG logo set).
 
+## Prompter
+
+Strong reference patterns:
+
+- Cloudflare deployment explicitly managed via `wrangler.jsonc`;
+- unified verification pipeline via `npm run verify` running in a GitHub Actions CI workflow;
+- responsive UI adapting footer spacing for narrow viewports.
+
 ## Shared conclusions
 
 The standard still does not mandate React, Tailwind, Zustand, or any export
@@ -89,18 +97,18 @@ extraction criteria):
 - **Production security headers** — SocialMediaCreator and StoryboardDesigner
   ship a near-identical `_headers` set. This is already a checklist requirement;
   Feedbackbogen-Generator is the remaining migration target.
-- **Browser end-to-end tests (Playwright)** — present in SocialMediaCreator and
-  StoryboardDesigner. Feedbackbogen-Generator is unit-only.
+- **Browser end-to-end tests (Playwright)** — present in SocialMediaCreator,
+  StoryboardDesigner, and Feedbackbogen-Generator. 
+- **Continuous integration** — SocialMediaCreator and Prompter use a
+  `.github/workflows/ci.yml` CI workflow running `npm run verify`. 
+- **Cloudflare deployment configuration** — Prompter's use of `wrangler.jsonc` 
+  is the documented baseline for new apps.
 - **Offline PWA support** — SocialMediaCreator and StoryboardDesigner both use
   `vite-plugin-pwa`. Recommended (SHOULD), not mandatory.
-- **German + English content** — SocialMediaCreator and StoryboardDesigner;
-  Feedbackbogen-Generator's German-only scope is the documented exception.
 - **Favicon, web manifest, and logo assets** — present across the apps.
 
 Single-app patterns held back (document, do not mandate):
 
-- **Continuous integration** — only SocialMediaCreator has a CI workflow.
-  Recommend spreading it; keep SHOULD until a second app adopts it.
 - **Footer donation / "Buy me a coffee" link** — only SocialMediaCreator. MAY,
   documented in `docs/ui-patterns.md`.
 
@@ -113,5 +121,4 @@ Open issues to resolve in the apps (not standard changes):
 - Feedbackbogen-Generator license conflict (`package.json` MIT vs GPLv3
   `LICENSE` file).
 - Feedbackbogen-Generator missing production security headers and `wrangler`
-  configuration (reverted CSP PR #36 → #37).
-- Feedbackbogen-Generator German-only and no browser-level tests.
+  configuration.
