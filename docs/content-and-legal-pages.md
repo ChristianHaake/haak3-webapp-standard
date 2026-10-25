@@ -5,6 +5,7 @@
 Every production app MUST provide:
 
 - Help;
+- Support information;
 - Privacy;
 - Imprint or legal notice.
 
@@ -37,6 +38,10 @@ Do not state “no data transmission” when the host necessarily receives
 connection metadata. Distinguish user-created content from technical request
 data.
 
+The support page contains an external link to the donation provider. Explain
+that the provider receives no data before a user selects that link and that its
+own privacy policy applies after navigation.
+
 ## Imprint
 
 The imprint MUST be completed and reviewed by the operator before release.
@@ -54,6 +59,13 @@ Help SHOULD explain:
 
 About SHOULD explain the educational purpose, intended audience, source
 license, and project ownership.
+
+## Support information
+
+The support page MUST explain that contributions are voluntary. It MUST name
+the actual operating or maintenance work that contributions support. It MUST
+offer at least one non-financial way to help, such as reporting errors or
+sharing the project. Do not invent funding claims or contact channels.
 
 ## Translation
 

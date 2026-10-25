@@ -1,6 +1,6 @@
 # Reference Application Audit
 
-Audit date: 2026-06-25 (refreshed from 2026-06-16)
+Audit date: 2026-10-24 (refreshed from 2026-06-25)
 
 This audit records the evidence used to maintain the standard. It is not a
 permanent ranking of the apps. It was refreshed after parallel
@@ -24,12 +24,14 @@ Strong reference patterns:
   Policy, Referrer-Policy, X-Content-Type-Options, X-Frame-Options;
 - service worker generated without external URLs;
 - semantic disclosures using `<details>` and `<summary>` for complex forms.
+- localized support-link label and a plain outbound support link without an
+  embed or tracking pixel;
+- light, dim, and dark preview modes that keep simulation content distinct.
 
 Exceptions or app-specific behavior:
 
 - Cloudflare Web Analytics requires an explicit privacy exception;
 - simulation warnings and provenance markers are product-specific;
-- an optional "Buy me a coffee" footer support link (external, no tracking);
 - React architecture is not required for simpler apps.
 
 ## Feedbackbogen-Generator
@@ -45,12 +47,11 @@ Strong reference patterns:
 - accessible footer repository link with an inline GitHub icon
   (`src/ui/templates.ts`), used as the markup reference for the footer pattern;
 - cross-browser end-to-end coverage with Playwright and `verify:live` deployment validation.
+- localized footer support link with an accessible name.
 
 Gaps relative to the draft:
 
 - visual language differs from the SocialMediaCreator baseline;
-- no production security headers and no `wrangler` configuration; a CSP PR was
-  reverted (#36 → #37) and the hardening is still missing;
 - no continuous integration workflow;
 - license metadata conflicts and is still unresolved: `package.json` declares
   `MIT` while the `LICENSE` file contains GPLv3 text. The other apps declare
@@ -71,6 +72,8 @@ Strong reference patterns:
   SocialMediaCreator set;
 - offline PWA support via `vite-plugin-pwa`;
 - feature-sliced source structure with the store split into slices.
+- light, dark, and high-contrast application themes, with persisted theme and
+  font-scale preferences applied before the main UI renders.
 
 Gaps relative to the draft:
 
@@ -94,23 +97,26 @@ visual foundations while allowing each app to retain an appropriate stack.
 Now satisfied or eligible because two or more apps match (per the `concept.md`
 extraction criteria):
 
-- **Production security headers** — SocialMediaCreator and StoryboardDesigner
-  ship a near-identical `_headers` set. This is already a checklist requirement;
-  Feedbackbogen-Generator is the remaining migration target.
+- **Production security headers** — SocialMediaCreator, StoryboardDesigner,
+  and Feedbackbogen-Generator ship `_headers` files. Header values remain
+  product-specific and must match each runtime.
 - **Browser end-to-end tests (Playwright)** — present in SocialMediaCreator,
   StoryboardDesigner, and Feedbackbogen-Generator. 
 - **Continuous integration** — SocialMediaCreator and Prompter use a
   `.github/workflows/ci.yml` CI workflow running `npm run verify`. 
-- **Cloudflare deployment configuration** — Prompter's use of `wrangler.jsonc` 
-  is the documented baseline for new apps.
+- **Cloudflare deployment configuration** — Prompter and
+  Feedbackbogen-Generator use `wrangler.jsonc`; it is the documented baseline
+  for new apps.
 - **Offline PWA support** — SocialMediaCreator and StoryboardDesigner both use
   `vite-plugin-pwa`. Recommended (SHOULD), not mandatory.
 - **Favicon, web manifest, and logo assets** — present across the apps.
 
-Single-app patterns held back (document, do not mandate):
+Family-wide support pattern:
 
-- **Footer donation / "Buy me a coffee" link** — only SocialMediaCreator. MAY,
-  documented in `docs/ui-patterns.md`.
+- **Support information page with "Buy me a coffee" link** — NOREA.schule
+  provides the route-and-information model. SocialMediaCreator,
+  Feedbackbogen-Generator, StoryboardCreator, SeriesCreator, TalkCreator,
+  PitchTimer, and Prompter provide the localized outbound-link evidence.
 
 Storage mechanism stays behavior-based, not mechanism-mandated: localStorage
 (Feedbackbogen-Generator) and IndexedDB (StoryboardDesigner, for image blobs)

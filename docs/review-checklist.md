@@ -13,6 +13,7 @@
 - [ ] Header, footer, and content pages follow the shared patterns.
 - [ ] Primary workflow works at 320px, 390px, tablet portrait, and desktop.
 - [ ] Editor and preview remain readable without horizontal page scrolling.
+- [ ] Appearance modes, when offered, preserve contrast and visible focus.
 
 ## Accessibility
 
@@ -35,7 +36,8 @@
 ## Content and legal
 
 - [ ] Help, privacy, and imprint routes work on direct navigation.
-- [ ] Footer links to required pages and source repository.
+- [ ] Footer links to help, support, privacy, imprint, and source repository.
+- [ ] The support page has direct navigation, a localized outbound link, and a privacy notice.
 - [ ] Markdown does not render unsafe raw HTML.
 - [ ] Legal text has been reviewed by the operator.
 
@@ -44,6 +46,7 @@
 - [ ] Node and package-manager requirements are documented.
 - [ ] Build, test, lint, and typecheck pass.
 - [ ] Persistence, migration, invalid import, and core domain behavior are tested.
+- [ ] Multi-language apps validate translation completeness and pin locales in browser tests.
 - [ ] Primary browser workflow has automated coverage where practical.
 - [ ] Production security headers match actual runtime behavior.
 - [ ] HTML revalidates and fingerprinted assets use immutable caching.

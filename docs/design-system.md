@@ -50,6 +50,17 @@ meaning, contrast, and interaction states MUST remain consistent.
 - Uppercase labels MAY identify sections, but MUST NOT carry essential meaning
   alone.
 
+## Appearance preferences
+
+- Apps with extended editing workflows SHOULD respect the system colour scheme
+  or offer a user-selected appearance.
+- If an app offers appearance modes, every mode MUST preserve text, control,
+  focus, and status contrast.
+- An appearance setting SHOULD persist locally and apply before the main UI
+  paints when a visible theme flash would disrupt the workflow.
+- Product previews MAY use their own visual modes. Do not confuse a preview
+  mode with the application accessibility setting.
+
 ## Layout
 
 - The minimum supported viewport width is `320px`.

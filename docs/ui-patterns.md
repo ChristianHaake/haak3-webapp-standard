@@ -6,7 +6,7 @@ Every app SHOULD contain:
 
 1. a header with brand, short purpose, and global controls;
 2. a main task area;
-3. a footer with help, privacy, imprint, and repository links;
+3. a footer with help, support, privacy, imprint, and repository links;
 4. dedicated content pages that preserve a clear route back to the app.
 
 The shell must remain usable when the main workflow becomes long or dense.
@@ -28,6 +28,7 @@ mobile viewport height.
 The footer MUST link to:
 
 - help;
+- a support information page;
 - privacy;
 - imprint or legal notice;
 - the public source repository.
@@ -61,27 +62,29 @@ Feedbackbogen-Generator:
 </a>
 ```
 
-### Support link
+### Support page
 
-An app MAY include a single donation or support link, for example
-"Buy me a coffee". Only SocialMediaCreator ships one today, so this stays
-optional. If present it:
+Every production app MUST provide a localized support information page. The
+footer links to this internal page, not directly to a donation provider. The
+page MUST explain the voluntary nature of support, the concrete project costs
+or maintenance it supports, and another non-financial way to help.
 
-- MUST be a plain outbound link with `target="_blank"` and
-  `rel="noopener noreferrer"`, with no third-party script, embed, or tracking
-  pixel;
+The page MUST contain one plain outbound "Buy me a coffee" link to
+`https://www.buymeacoffee.com/Haake` unless the operator specifies another
+target. The outbound link:
+
+- MUST use `target="_blank"` and `rel="noopener noreferrer"`, with no
+  third-party script, embed, or tracking pixel;
 - MUST have a visible, localized label and an accessible name;
-- SHOULD sit apart from the legal navigation, not inside it;
-- MAY use one branded accent colour for this single control; the rest of the
-  footer keeps the neutral-and-blue system.
+- MAY use one branded accent colour; the remaining page navigation keeps the
+  neutral-and-blue system.
 
-Reference markup, taken from SocialMediaCreator (the label is localized — German
-uses "Spendier mir einen Kaffee"):
+Reference markup, adapted from the NOREA.schule support page:
 
 ```html
 <a
-  class="app-footer__coffee"
-  href="https://buymeacoffee.com/<handle>"
+  class="support-page__coffee"
+  href="https://www.buymeacoffee.com/Haake"
   target="_blank"
   rel="noopener noreferrer"
 >
