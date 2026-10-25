@@ -28,6 +28,11 @@ remain visible.
 - Error messages should state the failed operation and recovery action.
 - Educational and legal claims must be precise and must match actual behavior.
 
+When an app supports multiple locales, it MUST validate key completeness,
+interpolation placeholders, and empty translations against a reference locale.
+Browser tests SHOULD set their locale explicitly. At least one non-default
+locale flow SHOULD be exercised when the product ships more than one language.
+
 ## Testing
 
 Every app MUST have automated tests for:

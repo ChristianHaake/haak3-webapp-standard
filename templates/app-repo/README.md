@@ -28,6 +28,12 @@ Document precisely:
 Do not claim that no data is transmitted: the hosting provider necessarily
 processes technical connection data.
 
+## Support
+
+The starter contains `content/unterstuetzung.md`. Replace its placeholders with
+the actual maintenance purpose and a real non-financial support option. Keep
+the Buy-me-a-coffee destination and privacy notice consistent with the app.
+
 ## Development
 
 Requirements:

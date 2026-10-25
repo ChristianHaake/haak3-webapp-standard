@@ -30,9 +30,11 @@ Search the repository for `{{` and replace every placeholder.
 ## Complete the application shell
 
 - [ ] Header with app identity and accurate local-processing message.
-- [ ] Footer with Hilfe, Über, Datenschutz, Impressum, and repository links.
+- [ ] Footer with Hilfe, Unterstützung, Über, Datenschutz, Impressum, and repository links.
 - [ ] Direct navigation works for every content route.
 - [ ] Semantic design tokens follow the shared design system.
+- [ ] Add the required Unterstützung page with actual project costs, a non-financial
+      help option, and a localized Buy-me-a-coffee link.
 
 ## Verify production behavior
 
