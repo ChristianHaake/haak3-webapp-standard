@@ -36,6 +36,8 @@
 
 - [ ] Help, AGB, privacy, and imprint routes work on direct navigation.
 - [ ] Footer links to required pages and source repository.
+- [ ] If support is offered, its Footer action opens an internal support route;
+      its provider link is a safe plain outbound link.
 - [ ] Markdown does not render unsafe raw HTML.
 - [ ] AGB, privacy, and imprint have been completed and reviewed by the operator.
 

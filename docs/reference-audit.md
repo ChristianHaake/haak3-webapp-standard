@@ -29,7 +29,8 @@ Exceptions or app-specific behavior:
 
 - Cloudflare Web Analytics requires an explicit privacy exception;
 - simulation warnings and provenance markers are product-specific;
-- an optional "Buy me a coffee" footer support link (external, no tracking);
+- an optional internal support page with a plain external provider link (no
+  tracking);
 - React architecture is not required for simpler apps.
 
 ## Feedbackbogen-Generator
@@ -109,8 +110,7 @@ extraction criteria):
 
 Single-app patterns held back (document, do not mandate):
 
-- **Footer donation / "Buy me a coffee" link** — only SocialMediaCreator. MAY,
-  documented in `docs/ui-patterns.md`.
+- **Support page** — optional; documented in `docs/ui-patterns.md`.
 
 Storage mechanism stays behavior-based, not mechanism-mandated: localStorage
 (Feedbackbogen-Generator) and IndexedDB (StoryboardDesigner, for image blobs)

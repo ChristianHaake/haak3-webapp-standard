@@ -31,6 +31,8 @@ Search the repository for `{{` and replace every placeholder.
 
 - [ ] Header with app identity and accurate local-processing message.
 - [ ] Footer with Hilfe, Über, AGB, Datenschutz, Impressum, and repository links.
+- [ ] If support is offered, link the Footer action to an internal support page,
+      not directly to the provider.
 - [ ] Add a stable AGB route with app-specific content; do not ship the starter text as approved terms.
 - [ ] Direct navigation works for every content route, including AGB.
 - [ ] Semantic design tokens follow the shared design system.
