@@ -34,10 +34,10 @@
 
 ## Content and legal
 
-- [ ] Help, privacy, and imprint routes work on direct navigation.
+- [ ] Help, AGB, privacy, and imprint routes work on direct navigation.
 - [ ] Footer links to required pages and source repository.
 - [ ] Markdown does not render unsafe raw HTML.
-- [ ] Legal text has been reviewed by the operator.
+- [ ] AGB, privacy, and imprint have been completed and reviewed by the operator.
 
 ## Engineering and release
 

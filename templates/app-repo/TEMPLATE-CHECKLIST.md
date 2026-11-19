@@ -30,14 +30,15 @@ Search the repository for `{{` and replace every placeholder.
 ## Complete the application shell
 
 - [ ] Header with app identity and accurate local-processing message.
-- [ ] Footer with Hilfe, Über, Datenschutz, Impressum, and repository links.
-- [ ] Direct navigation works for every content route.
+- [ ] Footer with Hilfe, Über, AGB, Datenschutz, Impressum, and repository links.
+- [ ] Add a stable AGB route with app-specific content; do not ship the starter text as approved terms.
+- [ ] Direct navigation works for every content route, including AGB.
 - [ ] Semantic design tokens follow the shared design system.
 
 ## Verify production behavior
 
 - [ ] Adjust `public/_headers` to actual network and embedding requirements.
-- [ ] Complete and review privacy and imprint content.
+- [ ] Complete and review AGB, privacy, and imprint content with the operator.
 - [ ] Confirm storage, reset, import, and export behavior.
 - [ ] Test production builds locally with a `verify:live` or `smoke:production` script.
 - [ ] Complete `docs/review-checklist.md`.

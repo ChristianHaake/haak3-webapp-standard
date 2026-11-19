@@ -2,11 +2,11 @@
 
 ## Application shell
 
-Every app SHOULD contain:
+Every app MUST contain:
 
 1. a header with brand, short purpose, and global controls;
 2. a main task area;
-3. a footer with help, privacy, imprint, and repository links;
+3. a footer with help, AGB, privacy, imprint, and a repository link when its public URL is confirmed;
 4. dedicated content pages that preserve a clear route back to the app.
 
 The shell must remain usable when the main workflow becomes long or dense.
@@ -28,12 +28,13 @@ mobile viewport height.
 The footer MUST link to:
 
 - help;
+- terms (AGB);
 - privacy;
 - imprint or legal notice;
-- the public source repository.
 
-It SHOULD also link to an about page and may include educator guidance, terms,
-or responsible-use information where the product needs them.
+It MUST link to the public source repository when its URL is confirmed. It
+SHOULD also link to an about page and may include educator guidance or
+responsible-use information where the product needs them.
 
 Footer labels, order, and route names SHOULD remain consistent within a
 language. Do not hide essential legal links in a menu.
