@@ -11,6 +11,7 @@ Use Node 22.12 through 22.x and run the following from a fresh checkout:
 ```sh
 cd prototypes/app-shell
 npm ci
+npx playwright install chromium
 npm run build
 npm run preview
 ```

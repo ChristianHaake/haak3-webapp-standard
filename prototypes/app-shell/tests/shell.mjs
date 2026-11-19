@@ -4,7 +4,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 const output=fileURLToPath(new URL('../shell-results/',import.meta.url));
 await mkdir(output,{recursive:true});
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await chromium.launch({headless:true});
 const results=[];
 const base=process.env.PILOT_URL??'http://127.0.0.1:4310/';
 async function capture(page,name){await page.evaluate(()=>scrollTo(0,0));await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));await page.screenshot({path:`${output}/${name}.png`,fullPage:true,style:'*{-webkit-tap-highlight-color:transparent!important}'});}
@@ -95,6 +95,7 @@ try{
     await page.getByRole('link',{name:expected==='de'?'Beispiele':expected==='en'?'Examples':expected==='fr'?'Exemples':expected==='es'?'Ejemplos':'Voorbeelden'}).tap();
     const start=page.getByRole('button',{name:expected==='de'?'Lokales Beispiel starten':expected==='en'?'Start local example':expected==='fr'?'Démarrer l’exemple local':expected==='es'?'Iniciar ejemplo local':'Lokaal voorbeeld starten'});
     await start.press('Enter');await expect(page.locator('#workspace')).toBeVisible();
+    await expect(page.getByRole('heading',{level:2,name:{de:'Lokales Beispiel ist aktiv.',en:'Local example is active.',fr:'L’exemple local est actif.',es:'El ejemplo local está activo.',nl:'Lokaal voorbeeld is actief.'}[expected],exact:true})).toBeVisible();
     await expect(page.getByText('Bleibt erhalten',{exact:true})).toBeVisible();
     await page.goBack();await expect(page.locator('#page-title')).toBeFocused();
     await page.goForward();await expect(page.locator('#workspace')).toBeFocused();
@@ -102,12 +103,13 @@ try{
     for(const [route,labels]of Object.entries(routeTitles)){await page.goto(`${base}?surface=standard&page=${route}`);await expect(page.getByRole('heading',{level:1,name:labels[expected],exact:true})).toBeVisible();await page.reload();await expect(page.locator('#page-title')).toHaveText(labels[expected]);}
     await page.goto(`${base}?surface=standard&page=support`);const coffee=page.getByRole('link',{name:{de:'Kaffee spendieren',en:'Buy me a coffee',fr:'Offrir un café',es:'Invitar un café',nl:'Trakteer op koffie'}[expected]});await expect(coffee).toHaveAttribute('href','https://www.buymeacoffee.com/Haake');await expect(coffee).toHaveAttribute('target','_blank');await expect(coffee).toHaveAttribute('rel','noopener noreferrer');assert.equal(await page.locator('iframe').count(),0);
     for(const width of [320,360,768,1440]){await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`standard/${browserLocale}/${width} overflow`);}
+    if(browserLocale==='de-DE'){await page.goto(`${base}?surface=standard`);await page.getByLabel('Sprache',{exact:true}).selectOption('en');await expect(page.locator('html')).toHaveAttribute('lang','en');await page.reload();await expect(page.getByLabel('Language',{exact:true})).toHaveValue('en');}
     results.push({surface:'standard',browserLocale,expectedLocale:expected,directRoute:true,history:true,examplePreservesWork:true,widths:[320,360,768,1440]});
     await context.close();
   }
   const blocked=await browser.newContext({locale:'de-DE'});
   await blocked.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked');}});});
-  const page=await blocked.newPage();await page.goto(base);await page.getByLabel('Sprache',{exact:true}).selectOption('en');await expect(page.locator('html')).toHaveAttribute('lang','en');
+  const page=await blocked.newPage();await page.goto(`${base}?surface=standard`);await page.getByLabel('Sprache',{exact:true}).selectOption('en');await expect(page.locator('html')).toHaveAttribute('lang','en');
   results.push({blockedStorage:'language switch stays usable'});await blocked.close();
   await writeFile(`${output}/results.json`,JSON.stringify({checkedAt:new Date().toISOString(),results},null,2));
   console.log(`PASS: ${results.length} shell result records; ${output}`);

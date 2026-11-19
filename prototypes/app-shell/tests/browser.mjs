@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 
 const output=fileURLToPath(new URL('../test-results/',import.meta.url));
 await mkdir(output,{recursive:true});
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await chromium.launch({headless:true});
 const results=[];
 try{
   for(const strategy of ['guided','direct','canvas']){

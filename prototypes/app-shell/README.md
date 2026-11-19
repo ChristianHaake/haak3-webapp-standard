@@ -14,6 +14,7 @@ Drei klickbare SocialMediaCreator-Bedienkonzepte mit gleichen synthetischen Beis
 ```sh
 cd prototypes/app-shell
 npm ci
+npx playwright install chromium
 npm run build
 npm run preview
 ```
