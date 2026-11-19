@@ -38,6 +38,7 @@ from their first release.
 | [App adoption](docs/app-adoption.md) | How an app adopts and documents the standard |
 | [Review checklist](docs/review-checklist.md) | Release and conformance review |
 | [Reference audit](docs/reference-audit.md) | Evidence from the three existing apps |
+| [App-shell pilot](docs/app-shell-pilot.md) | Reproducible synthetic shell evidence |
 
 ## Authority and exceptions
 
