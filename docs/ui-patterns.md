@@ -2,11 +2,11 @@
 
 ## Application shell
 
-Every app SHOULD contain:
+Every app MUST contain:
 
 1. a header with brand, short purpose, and global controls;
 2. a main task area;
-3. a footer with help, privacy, imprint, and repository links;
+3. a footer with help, AGB, privacy, imprint, and a repository link when its public URL is confirmed;
 4. dedicated content pages that preserve a clear route back to the app.
 
 The shell must remain usable when the main workflow becomes long or dense.
@@ -28,12 +28,13 @@ mobile viewport height.
 The footer MUST link to:
 
 - help;
+- terms (AGB);
 - privacy;
 - imprint or legal notice;
-- the public source repository.
 
-It SHOULD also link to an about page and may include educator guidance, terms,
-or responsible-use information where the product needs them.
+It MUST link to the public source repository when its URL is confirmed. It
+SHOULD also link to an about page and may include educator guidance or
+responsible-use information where the product needs them.
 
 Footer labels, order, and route names SHOULD remain consistent within a
 language. Do not hide essential legal links in a menu.
@@ -61,34 +62,19 @@ Feedbackbogen-Generator:
 </a>
 ```
 
-### Support link
+### Support page
 
-An app MAY include a single donation or support link, for example
-"Buy me a coffee". Only SocialMediaCreator ships one today, so this stays
-optional. If present it:
+An app MAY offer voluntary support. If it does, the visible Footer action MUST
+lead to an internal, directly loadable support page — never directly to a
+provider. The page MUST explain that support is voluntary, name the maintenance
+or testing it funds, offer a non-payment feedback path at
+`apps@haak3.de`, and only then present the external provider link.
 
-- MUST be a plain outbound link with `target="_blank"` and
-  `rel="noopener noreferrer"`, with no third-party script, embed, or tracking
-  pixel;
-- MUST have a visible, localized label and an accessible name;
-- SHOULD sit apart from the legal navigation, not inside it;
-- MAY use one branded accent colour for this single control; the rest of the
-  footer keeps the neutral-and-blue system.
-
-Reference markup, taken from SocialMediaCreator (the label is localized — German
-uses "Spendier mir einen Kaffee"):
-
-```html
-<a
-  class="app-footer__coffee"
-  href="https://buymeacoffee.com/<handle>"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <!-- coffee icon, aria-hidden="true" -->
-  <span>Buy me a coffee</span>
-</a>
-```
+The provider link MUST use `target="_blank"` and
+`rel="noopener noreferrer"`; it MUST NOT load a third-party script, embed, or
+tracking pixel. Both the Footer action and the page link need a visible,
+localized label and accessible name. The Footer action SHOULD sit apart from
+legal navigation and MAY use the single branded accent colour.
 
 ## Editor and preview
 

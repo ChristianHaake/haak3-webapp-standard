@@ -5,12 +5,13 @@
 Every production app MUST provide:
 
 - Help;
+- Terms (AGB);
 - Privacy;
 - Imprint or legal notice.
 
-Apps SHOULD provide an About page. Terms, responsible-use guidance, educator
-guidance, and transparency notices are required when the product's risks or
-audience justify them.
+Apps SHOULD provide an About page. Responsible-use guidance, educator guidance,
+and transparency notices are required when the product's risks or audience
+justify them.
 
 ## Implementation
 
@@ -41,6 +42,14 @@ data.
 
 The imprint MUST be completed and reviewed by the operator before release.
 Templates and generated text are not legal approval.
+
+## Terms (AGB)
+
+Every production app MUST provide a stable terms route, labeled AGB in German
+and with an equivalent localized label elsewhere. The terms MUST describe the
+actual app scope and be completed and reviewed by the operator before release.
+The starter supplies a visible draft structure only; it does not establish legal
+compliance or generate terms.
 
 ## Help and about
 
