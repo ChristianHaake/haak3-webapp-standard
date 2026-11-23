@@ -35,6 +35,10 @@
 ## Content and legal
 
 - [ ] Help, AGB, privacy, and imprint routes work on direct navigation.
+- [ ] Contact opens from the footer at 320/360 px and the latest edit survives the round trip.
+- [ ] Contact email, visible social labels, local icons, focus, 44 px targets and brand-specific links match the contact standard.
+- [ ] Help and support use the assigned feedback destinations. External links open safely and the mobile coffee action has an accessible name.
+- [ ] Where Cloudflare injects Web Analytics, verify its script and successful same-origin beacon in production and check the privacy text in every available translation.
 - [ ] Footer links to required pages and source repository.
 - [ ] If support is offered, its Footer action opens an internal support route;
       its provider link is a safe plain outbound link.

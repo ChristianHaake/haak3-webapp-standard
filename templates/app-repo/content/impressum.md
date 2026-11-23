@@ -11,7 +11,7 @@
 
 ## Kontakt
 
-E-Mail: {{OPERATOR_EMAIL}}
+E-Mail: [apps@haak3.de](mailto:apps@haak3.de)
 
 ## Verantwortlich für den Inhalt
 

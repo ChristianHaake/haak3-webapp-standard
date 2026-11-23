@@ -35,6 +35,7 @@ from their first release.
 | [Accessibility](docs/accessibility.md) | Required accessibility behavior |
 | [Coding standards](docs/coding-standards.md) | Source structure, testing, and dependencies |
 | [Content and legal pages](docs/content-and-legal-pages.md) | Markdown pages, AGB, privacy, and imprint |
+| [Contact and feedback](docs/contact-and-feedback.md) | Footer contact, brand profiles and Jira forms |
 | [App adoption](docs/app-adoption.md) | How an app adopts and documents the standard |
 | [Review checklist](docs/review-checklist.md) | Release and conformance review |
 | [Reference audit](docs/reference-audit.md) | Evidence from the three existing apps |
