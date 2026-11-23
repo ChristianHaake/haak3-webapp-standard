@@ -22,3 +22,10 @@ Erkläre, wie lokal gespeicherte Daten vollständig gelöscht werden.
 ## Unterstützte Geräte und Dateien
 
 Dokumentiere Browser, Dateitypen, Größenlimits und bekannte Einschränkungen.
+
+## Feedback
+
+- [Fehler melden]({{BUG_FORM_URL}})
+- [Funktion vorschlagen]({{FEATURE_FORM_URL}})
+
+Die Links öffnen externe Atlassian-Formulare. Bitte sende keine Projektdateien oder personenbezogenen Daten mit.

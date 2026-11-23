@@ -12,7 +12,7 @@ Stand: {{YYYY-MM-DD}}
 
 {{OPERATOR_ADDRESS}}
 
-E-Mail: {{OPERATOR_EMAIL}}
+E-Mail: [apps@haak3.de](mailto:apps@haak3.de)
 
 ## Hosting
 
@@ -32,11 +32,18 @@ im Browser verarbeitet werden oder das Gerät verlassen.
 
 Liste alle verwendeten `localStorage`- und IndexedDB-Einträge mit Zweck und
 Löschmöglichkeit auf.
+Berücksichtige automatisch gesicherte Sitzungen, Bilder und die Wiederherstellung nach dem Neuladen in jeder Übersetzung.
 
 ## Cookies und Analyse
 
 Dokumentiere Cookies, Hosting-Analyse und weitere Dienste. Falls keine
 eingesetzt werden, sage dies nur, wenn es durch die Produktion geprüft wurde.
+
+Bei aktiviertem Cloudflare Web Analytics: Beschreibe Zweck, erfasste Aufruf- und Leistungsdaten, Empfänger und Rechtsgrundlage anhand der tatsächlichen Auslieferung. Prüfe Skript und Beacon im Browser.
+
+## Externe Links
+
+Kontakt-, Feedback- und Unterstützungsseiten verlinken auf externe Anbieter. Benenne die in dieser App verwendeten Anbieter und erkläre, dass sie erst beim Öffnen des jeweiligen Links aufgerufen werden.
 
 ## Löschung
 

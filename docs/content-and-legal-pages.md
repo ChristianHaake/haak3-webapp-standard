@@ -5,6 +5,7 @@
 Every production app MUST provide:
 
 - Help;
+- Contact (see [contact and feedback](contact-and-feedback.md));
 - Terms (AGB);
 - Privacy;
 - Imprint or legal notice.

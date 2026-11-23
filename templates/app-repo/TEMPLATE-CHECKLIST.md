@@ -30,7 +30,9 @@ Search the repository for `{{` and replace every placeholder.
 ## Complete the application shell
 
 - [ ] Header with app identity and accurate local-processing message.
-- [ ] Footer with Hilfe, Über, AGB, Datenschutz, Impressum, and repository links.
+- [ ] Link Hilfe, Kontakt, Über, AGB, Datenschutz and Impressum in the footer. Include the repository link only for confirmed public source.
+- [ ] Wire the contact and support Markdown files to internal routes. Use the [brand and form directory](https://github.com/ChristianHaake/haak3-webapp-standard/blob/main/docs/contact-and-feedback.md) for all five URL placeholders. Follow its email fallback for groups without assigned forms.
+- [ ] Render accessible social icon links with visible platform names. Test the footer at 320/360 px and verify unsaved edits survive navigation to contact and back.
 - [ ] If support is offered, link the Footer action to an internal support page,
       not directly to the provider.
 - [ ] Add a stable AGB route with app-specific content; do not ship the starter text as approved terms.
@@ -40,6 +42,7 @@ Search the repository for `{{` and replace every placeholder.
 ## Verify production behavior
 
 - [ ] Adjust `public/_headers` to actual network and embedding requirements.
+- [ ] For dashboard-injected Cloudflare Web Analytics on a proxied domain, use the policy in `variants/cloudflare-web-analytics/_headers` in place of `public/_headers`. Preserve existing app-specific script hashes and permissions when migrating. Verify the loaded script and a successful POST to `/cdn-cgi/rum` after deployment. Keep the restrictive base policy for deployments without analytics.
 - [ ] Complete and review AGB, privacy, and imprint content with the operator.
 - [ ] Confirm storage, reset, import, and export behavior.
 - [ ] Test production builds locally with a `verify:live` or `smoke:production` script.
