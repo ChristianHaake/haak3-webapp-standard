@@ -9,5 +9,6 @@ Before changing a shared rule:
 3. identify migration impact and exceptions;
 4. update the review checklist when requirements change.
 
-SocialMediaCreator is the visual baseline. It is not a universal architecture
-template.
+SocialMediaCreator informs visual hierarchy and behavior. The current palette
+and shell contract are defined in `docs/`, not by its legacy colors or footer.
+It is not a universal architecture template.

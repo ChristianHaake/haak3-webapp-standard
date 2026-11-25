@@ -29,12 +29,19 @@ Search the repository for `{{` and replace every placeholder.
 
 ## Complete the application shell
 
-- [ ] Header with app identity and accurate local-processing message.
-- [ ] Footer with Hilfe, Unterstützung, Über, Datenschutz, Impressum, and repository links.
+- [ ] Header with own app logo/name, safe app-start link, and accurate local-processing message.
+- [ ] Footer with haak3 attribution, Hilfe, Beispiele when shipped, Über die App, Unterstützen, AGB, Datenschutz and Impressum; required links stay visible at 320px.
+- [ ] Unterstützen is a labeled orange coffee action, at least 44×44px, leading to the internal page.
+- [ ] Add a repository icon only after confirming its correct public URL; include accessible name, focus/hover tooltip, 44×44px target and safe external-link attributes.
+- [ ] Use the full-name language menu only for implemented translations; omit for a single language. Preserve work on switching and handle blocked preference storage.
+- [ ] Record each missing German, English, French, Spanish, or Dutch target locale as a migration issue; use browser preference with a persisted manual choice where locales exist.
 - [ ] Direct navigation works for every content route.
+- [ ] Internal content navigation and browser history preserve work and move/restore focus.
 - [ ] Semantic design tokens follow the shared design system.
-- [ ] Add the required Unterstützung page with actual project costs, a non-financial
+- [ ] Adopted interactions meet the shared [component contracts](https://github.com/ChristianHaake/haak3-webapp-standard/blob/main/docs/component-contracts.md).
+- [ ] Add the required Unterstützen page with actual project costs, a non-financial
       help option, and a localized Buy-me-a-coffee link.
+- [ ] Add a visible `apps@haak3.de` mail link for error reports and feature ideas; do not prefill project content.
 
 ## Verify production behavior
 

@@ -30,6 +30,12 @@ processes technical connection data.
 
 ## Support
 
+The shared shell uses the app's own logo/name in the header and haak3
+attribution in the footer. Keep required footer pages visible on mobile.
+Use the labeled orange coffee action for the internal support page and show a
+repository icon only after confirming that the correct repository is public.
+Offer a full-name language menu only for implemented interface translations.
+
 The starter contains `content/unterstuetzung.md`. Replace its placeholders with
 the actual maintenance purpose and a real non-financial support option. Keep
 the Buy-me-a-coffee destination and privacy notice consistent with the app.

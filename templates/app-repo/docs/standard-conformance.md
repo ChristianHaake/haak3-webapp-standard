@@ -3,7 +3,7 @@
 Standard:
 https://github.com/ChristianHaake/haak3-webapp-standard
 
-Standard version: `1.0.0-draft`
+Standard version: `1.1.0-draft`
 
 Last reviewed: `{{YYYY-MM-DD}}`
 

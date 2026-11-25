@@ -13,31 +13,54 @@ components. These values are the family baseline:
 
 ```css
 :root {
-  --app-bg: #f3f5f8;
+  --app-bg: #f4f2ef;
   --surface: #ffffff;
-  --surface-subtle: #f8fafc;
-  --text: #111827;
-  --text-muted: #667085;
-  --border: #dfe3e8;
-  --primary: #245dcc;
-  --primary-hover: #1949a4;
-  --primary-soft: #eaf0ff;
+  --surface-subtle: #f8f6f3;
+  --text: #24211e;
+  --text-muted: #645c53;
+  --border: #dfdad4;
+  --control-border: #887b6b;
+  --brand: #ff9000;
+  --on-brand: #24211e;
+  --primary: #b84a00;
+  --primary-hover: #943900;
+  --primary-soft: #fff0df;
+  --link: #b84a00;
   --success: #176b3a;
   --success-soft: #edfbf2;
   --warning: #5f4700;
   --warning-soft: #fff8e8;
   --danger: #b42318;
   --danger-soft: #fef3f2;
-  --focus: rgb(36 93 204 / 35%);
+  --focus: #943900;
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 20px;
-  --shadow-soft: 0 18px 45px rgb(15 23 42 / 8%);
+  --radius-lg: 16px;
+  --shadow-soft: 0 18px 45px rgb(36 33 30 / 8%);
 }
 ```
 
 Apps MAY adjust the primary hue for a justified product identity. Semantic
 meaning, contrast, and interaction states MUST remain consistent.
+
+Brand orange is not the action background: normal white text on
+`--brand` fails minimum text contrast (2.27:1). Apps MUST use a contrast-safe
+foreground/background pairing: the baseline uses `--on-brand` on `--brand`
+(7.05:1) and white on `--primary` (5.23:1). Control boundaries and focus
+indicators MUST remain distinguishable against their adjacent surfaces;
+`--border` alone is not the baseline input boundary. These measured pairs
+do not establish contrast compliance for every component or appearance mode.
+
+Text links and filled actions have distinct roles. The light baseline happens
+to use the same hue for `--link` and `--primary`; a dark appearance may need
+a lighter link foreground while keeping a dark action fill with white text.
+For example, the Storyboard pilot uses `#ffb36b` for dark-mode links. Recheck
+normal, hover, focus and selected text against the actual surface rather than
+reusing an action-background token blindly.
+
+Existing blue apps MAY retain their current palette during staged adoption,
+with the remaining migration recorded in their conformance document. Do not
+bulk-replace blue in preview content, stored theme IDs, or original logo assets.
 
 ## Typography
 

@@ -14,7 +14,16 @@ The standard is based on patterns found in:
 
 ## Status
 
-Version: **1.0.0-draft**
+Version: **1.1.0-draft**
+
+The current draft adopts the approved orange family palette, app-specific
+header identity, haak3 footer attribution, a prominent internal support link,
+conditional public-repository icons, and language menus with full names.
+It also records the Feedbackbogen locale behavior as the family target and
+the shared help, examples, terms, privacy, imprint, and support structure.
+See [UI overhaul decisions and migration](docs/ui-overhaul-decisions.md).
+Existing apps migrate incrementally; this documentation update is not a
+production migration or a declaration of conformance.
 
 Normative terms use the meanings from RFC 2119:
 
@@ -32,12 +41,17 @@ from their first release.
 | [Design system](docs/design-system.md) | Visual foundations and design tokens |
 | [Architecture](docs/architecture.md) | Runtime, storage, deployment, and security |
 | [UI patterns](docs/ui-patterns.md) | Shared shell and interaction patterns |
+| [Shell validation pilot](docs/shell-validation-pilot.md) | Validated shell behavior and remaining migration issues |
+| [Component contracts](docs/component-contracts.md) | Observable behavior for common controls and editor patterns |
 | [Accessibility](docs/accessibility.md) | Required accessibility behavior |
 | [Coding standards](docs/coding-standards.md) | Source structure, testing, and dependencies |
 | [Content and legal pages](docs/content-and-legal-pages.md) | Markdown pages, privacy, and imprint |
 | [App adoption](docs/app-adoption.md) | How an app adopts and documents the standard |
 | [Review checklist](docs/review-checklist.md) | Release and conformance review |
 | [Reference audit](docs/reference-audit.md) | Evidence from the three existing apps |
+| [UI overhaul decisions](docs/ui-overhaul-decisions.md) | Approved changes, evidence, and migration impact |
+| [Pilot verification](docs/pilot-verification.md) | Real-app checks, lessons, and remaining acceptance gates |
+| [Rollout matrix](docs/rollout-matrix.md) | Staged product scope, preserved behavior, and release gates |
 
 ## Authority and exceptions
 
