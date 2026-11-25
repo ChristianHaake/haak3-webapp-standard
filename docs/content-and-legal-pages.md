@@ -6,6 +6,7 @@ Every production app MUST provide:
 
 - Help;
 - Contact (see [contact and feedback](contact-and-feedback.md));
+- Support (see [support page](ui-patterns.md#support-page));
 - Terms (AGB);
 - Privacy;
 - Imprint or legal notice.
@@ -51,6 +52,15 @@ and with an equivalent localized label elsewhere. The terms MUST describe the
 actual app scope and be completed and reviewed by the operator before release.
 The starter supplies a visible draft structure only; it does not establish legal
 compliance or generate terms.
+
+## Support
+
+The support page MUST describe voluntary contributions in the app's own terms.
+It MUST put the coffee action before non-payment feedback and explain that the
+external provider is contacted only after the user opens its link. Keep the
+feedback forms and `apps@haak3.de` available without a donation. Follow the
+full [support-page contract](ui-patterns.md#support-page); a Markdown renderer
+MAY style the coffee link as a button without loading a provider widget.
 
 ## Help and about
 

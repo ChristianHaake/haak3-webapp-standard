@@ -64,17 +64,37 @@ Feedbackbogen-Generator:
 
 ### Support page
 
-An app MAY offer voluntary support. If it does, the visible Footer action MUST
-lead to an internal, directly loadable support page — never directly to a
-provider. The page MUST explain that support is voluntary, name the maintenance
-or testing it funds, offer a non-payment feedback path at
-`apps@haak3.de`, and only then present the external provider link.
+Every production app MUST provide an internal, directly loadable support page.
+The visible Footer action MUST lead there, never directly to a provider. The
+page MUST explain that support is voluntary and does not change access to the
+app. It MUST name actual maintenance, testing, or operating work without
+inventing costs or funding claims.
 
-The provider link MUST use `target="_blank"` and
+The page MUST show one clear, visually primary coffee action before secondary
+feedback options. It SHOULD be visible without scrolling at 320 × 720 CSS
+pixels. The action MUST have a touch target of at least 44 × 44 CSS pixels.
+Below it, the page MUST offer a non-payment way to help, including the assigned
+error and feature forms where available and `apps@haak3.de` for general contact.
+The page MUST explain near the coffee action that the donation provider opens
+only after activation. Keep the page's remaining navigation visually secondary.
+
+The provider link to `https://buymeacoffee.com/Haake` MUST use `target="_blank"` and
 `rel="noopener noreferrer"`; it MUST NOT load a third-party script, embed, or
 tracking pixel. Both the Footer action and the page link need a visible,
 localized label and accessible name. The Footer action SHOULD sit apart from
 legal navigation and MAY use the single branded accent colour.
+
+SocialMediaCreator's support-page update in PR #54 established the first-action
+hierarchy after its previous page hid the coffee link below feedback text.
+Feedbackbogen-Generator already demonstrates an internal support route;
+StoryboardCreator's checked stage commit on 2026-11-26 still linked directly to
+the provider. Transfer the hierarchy in each app's existing framework and route
+without copying SocialMediaCreator's component or product-specific wording.
+Apps with an existing support route mainly need content order and button styling;
+apps with a provider-direct Footer link need an internal route, localized copy,
+and a direct-navigation check. Keep existing published support URLs and record
+temporary exceptions in the app's conformance document. This change does not
+alter project files, storage, or export behavior.
 
 ## Editor and preview
 

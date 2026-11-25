@@ -29,8 +29,9 @@ Exceptions or app-specific behavior:
 
 - Cloudflare Web Analytics requires an explicit privacy exception;
 - simulation warnings and provenance markers are product-specific;
-- an optional internal support page with a plain external provider link (no
-  tracking);
+- an internal support page with a plain external provider link (no provider
+  embed or tracking); its initial copy placed feedback before the coffee action,
+  which SocialMediaCreator PR #54 corrected;
 - React architecture is not required for simpler apps.
 
 ## Feedbackbogen-Generator
