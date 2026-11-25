@@ -33,8 +33,11 @@ Search the repository for `{{` and replace every placeholder.
 - [ ] Link Hilfe, Kontakt, Über, AGB, Datenschutz and Impressum in the footer. Include the repository link only for confirmed public source.
 - [ ] Wire the contact and support Markdown files to internal routes. Use the [brand and form directory](https://github.com/ChristianHaake/haak3-webapp-standard/blob/main/docs/contact-and-feedback.md) for all five URL placeholders. Follow its email fallback for groups without assigned forms.
 - [ ] Render accessible social icon links with visible platform names. Test the footer at 320/360 px and verify unsaved edits survive navigation to contact and back.
-- [ ] If support is offered, link the Footer action to an internal support page,
-      not directly to the provider.
+- [ ] Link the Footer support action to the internal support page, not directly
+      to the provider.
+- [ ] Replace `{{ACTUAL_MAINTENANCE_OR_TESTING_WORK}}` with a specific, true
+      sentence. Render the coffee link as the first prominent action, at least
+      44 × 44 px, and keep the no-payment feedback actions below it.
 - [ ] Add a stable AGB route with app-specific content; do not ship the starter text as approved terms.
 - [ ] Direct navigation works for every content route, including AGB.
 - [ ] Semantic design tokens follow the shared design system.

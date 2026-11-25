@@ -40,8 +40,13 @@
 - [ ] Help and support use the assigned feedback destinations. External links open safely and the mobile coffee action has an accessible name.
 - [ ] Where Cloudflare injects Web Analytics, verify its script and successful same-origin beacon in production and check the privacy text in every available translation.
 - [ ] Footer links to required pages and source repository.
-- [ ] If support is offered, its Footer action opens an internal support route;
-      its provider link is a safe plain outbound link.
+- [ ] The Footer action opens an internal support route. Its page explains
+      voluntary support and actual app work, places a visible 44 × 44 px coffee
+      action before non-payment feedback, and explains the external destination.
+- [ ] The support action is reachable without horizontal scrolling at 320 px
+      and is preferably visible within a 320 × 720 px viewport.
+- [ ] The donation link is a safe plain outbound link, with no provider embed,
+      script, or tracking pixel.
 - [ ] Markdown does not render unsafe raw HTML.
 - [ ] AGB, privacy, and imprint have been completed and reviewed by the operator.
 
