@@ -31,7 +31,7 @@ strongest qualities:
 
 - neutral gray workspace with white surfaces;
 - dark, high-contrast typography;
-- one blue primary accent;
+- orange action accents, warm neutral surfaces, and a separate brand orange;
 - restrained borders, radii, and shadows;
 - clear hierarchy through labels, headings, and grouped panels;
 - visible local-processing and educational-context communication;
@@ -39,6 +39,12 @@ strongest qualities:
 
 This is a design direction, not a requirement to copy its React components or
 its app-specific social-media preview styling.
+
+The original reference apps inform behavior; the approved UI-workshop
+decisions update the visual baseline. App identity leads in the header,
+haak3 appears in the footer, and each app retains a layout suited to its task.
+Existing logos are not automatically recolored. See
+[the decision record](docs/ui-overhaul-decisions.md) for migration and evidence.
 
 ## Implementation strategy
 

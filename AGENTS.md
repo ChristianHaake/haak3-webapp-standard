@@ -13,6 +13,8 @@ family. Documentation changes can affect multiple production applications.
   duplicate full rules here.
 - Use SocialMediaCreator as the primary visual reference, not as a source to
   copy blindly.
+- Apply the current palette and shell contract from `docs/`; legacy app
+  colors and footer behavior are evidence, not overrides of approved rules.
 - Compare relevant behavior in SocialMediaCreator, Feedbackbogen-Generator,
   and StoryboardDesigner before standardizing an existing pattern.
 - Distinguish **MUST**, **SHOULD**, and **MAY** requirements.
