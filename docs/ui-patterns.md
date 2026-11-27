@@ -39,6 +39,27 @@ responsible-use information where the product needs them.
 Footer labels, order, and route names SHOULD remain consistent within a
 language. Do not hide essential legal links in a menu.
 
+### Discover other apps
+
+Every app SHOULD include one visible, localized footer link labelled
+"Weitere Apps" (English: "More apps") to
+`https://haak3.de/apps-fur-die-schule/`. The link opens the public app
+directory, so the directory can change without a release of every app. Keep
+it in the informational footer group, separate from the support action and
+legal links. It MUST have a descriptive accessible name, visible keyboard
+focus, and a touch target of at least 44 × 44 CSS pixels. When opening it in
+a new tab, use `rel="noopener noreferrer"`. Do not load the directory, its
+images, scripts, or tracking code inside the app.
+
+At narrow widths, wrap the footer group and retain the label. Check the link
+and footer layout at 320 and 360 CSS pixels. Existing apps add one link and
+its translations. No project format or storage migration is needed.
+
+The public directory currently links Feedbackbogen-Generator,
+SocialMediaCreator, SeriesCreator, Prompter, and Storyboard-Creator. TalkCreator
+is absent as of 2026-11-27. The directory owner SHOULD add it before presenting
+the directory as a complete list of the family.
+
 ### Repository link
 
 The required source-repository link SHOULD render as an icon-and-label link

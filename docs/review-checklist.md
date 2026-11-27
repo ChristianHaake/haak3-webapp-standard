@@ -40,6 +40,9 @@
 - [ ] Help and support use the assigned feedback destinations. External links open safely and the mobile coffee action has an accessible name.
 - [ ] Where Cloudflare injects Web Analytics, verify its script and successful same-origin beacon in production and check the privacy text in every available translation.
 - [ ] Footer links to required pages and source repository.
+- [ ] The localized "Weitere Apps" footer link opens the public app directory,
+      has a visible focus state and a 44 × 44 px target, and remains readable
+      without horizontal overflow at 320/360 px.
 - [ ] The Footer action opens an internal support route. Its page explains
       voluntary support and actual app work, places a visible 44 × 44 px coffee
       action before non-payment feedback, and explains the external destination.

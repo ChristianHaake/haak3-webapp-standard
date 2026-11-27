@@ -31,6 +31,7 @@ Search the repository for `{{` and replace every placeholder.
 
 - [ ] Header with app identity and accurate local-processing message.
 - [ ] Link Hilfe, Kontakt, Über, AGB, Datenschutz and Impressum in the footer. Include the repository link only for confirmed public source.
+- [ ] Add a localized "Weitere Apps" footer link to https://haak3.de/apps-fur-die-schule/ with visible focus and a 44 × 44 px target. Check 320/360 px layouts.
 - [ ] Wire the contact and support Markdown files to internal routes. Use the [brand and form directory](https://github.com/ChristianHaake/haak3-webapp-standard/blob/main/docs/contact-and-feedback.md) for all five URL placeholders. Follow its email fallback for groups without assigned forms.
 - [ ] Render accessible social icon links with visible platform names. Test the footer at 320/360 px and verify unsaved edits survive navigation to contact and back.
 - [ ] Link the Footer support action to the internal support page, not directly
